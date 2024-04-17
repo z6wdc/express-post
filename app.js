@@ -7,6 +7,13 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const postsRouter = require('./routes/posts')
 
+const dotenv = require('dotenv')
+const mongoose = require('mongoose')
+
+dotenv.config({ path: './config.env' })
+mongoose.connect(process.env.MONGODB)
+    .then(res=> console.log("You successfully connected to MongoDB!"));
+
 var app = express();
 
 app.use(logger('dev'));
