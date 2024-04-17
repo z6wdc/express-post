@@ -1,15 +1,14 @@
 {
   "name": "express-post",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "cho",
-  "license": "ISC",
   "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "express": "^4.19.2",
-    "mongoose": "^8.3.2"
+    "morgan": "~1.9.1"
   }
 }
