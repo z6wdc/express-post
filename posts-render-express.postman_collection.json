@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "f8ab0ba4-71a0-4b25-9e88-327fec82ca5e",
+		"name": "posts-render-express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6890563"
+	},
+	"item": [
+		{
+			"name": "posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://express-post.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"express-post",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"a\",\n    \"content\": \"clear\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://express-post.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"express-post",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://express-post.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"express-post",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://express-post.onrender.com/posts/66213445b49377fb3d0be3f7",
+					"protocol": "https",
+					"host": [
+						"express-post",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"66213445b49377fb3d0be3f7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts/{id}",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"high score\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://express-post.onrender.com/posts/662678acbfd4d814f2bf927b",
+					"protocol": "https",
+					"host": [
+						"express-post",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"662678acbfd4d814f2bf927b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
