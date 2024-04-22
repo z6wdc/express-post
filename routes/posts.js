@@ -68,4 +68,24 @@ router.delete('/:id', async function (req, res, next) {
     }
 })
 
+router.patch('/:id', async function (req, res, next) {
+    const b = req.body
+    const id = req.params.id
+    try {
+        await Post.findByIdAndUpdate(id, b, { new: true, runValidators: true })
+            .then(updated => {
+                if (updated != null) {
+                    res.send(handleSuccess(updated))
+                } else {
+                    res.send(handleError('無此ID'))
+                }
+            })
+            .catch(error => {
+                res.send(handleError(error))
+            })
+    } catch (error) {
+        res.send(handleError(error))
+    }
+})
+
 module.exports = router
