@@ -22,7 +22,10 @@ const postSchema = new mongoose.Schema(
             type: Number,
             default: 0
         }
-    }
+    }, {
+    timestamps: true,
+    versionKey: false
+}
 )
 
 const Post = mongoose.model('Post', postSchema)
