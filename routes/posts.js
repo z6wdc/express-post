@@ -27,6 +27,7 @@ router.get('/', async function (req, res, next) {
 
 router.post('/', async function (req, res, next) {
     const b = req.body
+    b.content = b.content.trim()
     try {
         const newPost = await Post.create(b)
         res.send(handleSuccess(newPost))
@@ -71,6 +72,7 @@ router.delete('/:id', async function (req, res, next) {
 router.patch('/:id', async function (req, res, next) {
     const b = req.body
     const id = req.params.id
+    b.content = b.content.trim()
     try {
         await Post.findByIdAndUpdate(id, b, { new: true, runValidators: true })
             .then(updated => {
