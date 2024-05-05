@@ -1,5 +1,6 @@
 const express = require('express')
 const Post = require('../model/post')
+const User = require('../model/user')
 const router = express.Router()
 
 const handleSuccess = function (data) {
@@ -18,7 +19,7 @@ const handleError = function (message) {
 
 router.get('/', async function (req, res, next) {
     try {
-        const posts = await Post.find()
+        const posts = await Post.find().populate('user')
         res.send(handleSuccess(posts))
     } catch (error) {
         res.send(handleError(error))
@@ -27,8 +28,8 @@ router.get('/', async function (req, res, next) {
 
 router.post('/', async function (req, res, next) {
     const b = req.body
-    b.content = b.content.trim()
     try {
+        b.content = b.content.trim()
         const newPost = await Post.create(b)
         res.send(handleSuccess(newPost))
     } catch (error) {
@@ -72,7 +73,9 @@ router.delete('/:id', async function (req, res, next) {
 router.patch('/:id', async function (req, res, next) {
     const b = req.body
     const id = req.params.id
-    b.content = b.content.trim()
+    if (b.content !== undefined) {
+        b.content = b.content.trim()
+    }
     try {
         await Post.findByIdAndUpdate(id, b, { new: true, runValidators: true })
             .then(updated => {
