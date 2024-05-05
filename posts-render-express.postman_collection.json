@@ -45,7 +45,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"a\",\n    \"content\": \"clear\"\n}",
+					"raw": "{\n    \"user\": \"6637055b98e470639b89c401\",\n    \"content\": \"test\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -93,7 +93,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://express-post.onrender.com/posts/66213445b49377fb3d0be3f7",
+					"raw": "https://express-post.onrender.com/posts/6637058277ace2c026d710bd",
 					"protocol": "https",
 					"host": [
 						"express-post",
@@ -102,7 +102,7 @@
 					],
 					"path": [
 						"posts",
-						"66213445b49377fb3d0be3f7"
+						"6637058277ace2c026d710bd"
 					]
 				}
 			},
@@ -123,7 +123,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://express-post.onrender.com/posts/662678acbfd4d814f2bf927b",
+					"raw": "https://express-post.onrender.com/posts/6637058377ace2c026d710bf",
 					"protocol": "https",
 					"host": [
 						"express-post",
@@ -132,7 +132,7 @@
 					],
 					"path": [
 						"posts",
-						"662678acbfd4d814f2bf927b"
+						"6637058377ace2c026d710bf"
 					]
 				}
 			},
